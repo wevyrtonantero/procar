@@ -221,8 +221,7 @@ h3 {
   line-height: 1.68;
 }
 
-.hero-actions,
-.contact-actions {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -487,9 +486,6 @@ h3 {
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.72)),
     url("img/fachada.png") center / cover fixed;
-  display: grid;
-  gap: 28px;
-  grid-template-columns: 1fr auto;
   padding: clamp(76px, 9vw, 118px) clamp(20px, 5vw, 74px);
 }
 
@@ -497,25 +493,23 @@ h3 {
   max-width: 860px;
 }
 
-.floating-whatsapp {
+.map-link {
   align-items: center;
-  background: #24d366;
-  border-radius: 999px;
-  bottom: 22px;
-  box-shadow: 0 12px 34px rgba(36, 211, 102, 0.34);
-  color: #0b321b;
-  display: flex;
-  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  color: var(--white);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
   justify-content: center;
-  position: fixed;
-  right: 22px;
-  width: 58px;
-  z-index: 19;
+  margin-top: 18px;
+  min-height: 46px;
+  padding: 0 18px;
 }
 
-.floating-whatsapp svg {
-  height: 30px;
-  width: 30px;
+.map-link:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
 .site-footer {
@@ -543,6 +537,12 @@ h3 {
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer small {
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  margin-top: 6px;
 }
 
 .creator-link {
@@ -657,9 +657,6 @@ h3 {
     margin-top: 0;
   }
 
-  .contact-actions {
-    margin-top: 0;
-  }
 }
 
 @media (max-width: 620px) {
@@ -680,8 +677,7 @@ h3 {
     font-size: clamp(2.42rem, 13vw, 4.05rem);
   }
 
-  .hero-actions,
-  .contact-actions {
+  .hero-actions {
     align-items: stretch;
     flex-direction: column;
   }
